@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Playerok Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; user-select: none; }
+        body { background: #0b0e14; color: #ffffff; padding-bottom: 80px; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 16px; background: #131722; border-bottom: 1px solid #1f2638; }
+        .logo { font-size: 20px; font-weight: 800; color: #4f80ff; }
+        .lang-switch { background: #1f2638; border-radius: 20px; padding: 4px; display: flex; gap: 4px; }
+        .lang-btn { border: none; background: transparent; color: #8a94a6; padding: 4px 12px; border-radius: 16px; font-weight: 600; cursor: pointer; }
+        .lang-btn.active { background: #4f80ff; color: #fff; }
+        .card { background: #131722; margin: 16px; padding: 20px; border-radius: 16px; border: 1px solid #1f2638; }
+        .balance-title { color: #8a94a6; font-size: 14px; margin-bottom: 8px; }
+        .balance-val { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
+        .btn-group { display: flex; gap: 12px; }
+        .btn { flex: 1; padding: 12px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; }
+        .btn-primary { background: #4f80ff; color: #fff; }
+        .btn-secondary { background: #1f2638; color: #fff; }
+        .nav-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #131722; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #1f2638; }
+        .nav-item { color: #8a94a6; font-size: 11px; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .nav-item.active { color: #4f80ff; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">● Playerok</div>
+        <div class="lang-switch">
+            <button class="lang-btn active">RU</button>
+            <button class="lang-btn">EN</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="balance-title">Баланс</div>
+        <div class="balance-val">0,00 ₽</div>
+        <div class="btn-group">
+            <a href="https://t.me/playerok012" class="btn btn-primary">Пополнить</a>
+            <a href="https://t.me/playerok012" class="btn btn-secondary">Вывести</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="balance-title">Активные сделки</div>
+        <p style="color: #8a94a6; font-size: 14px;">У вас пока нет активных сделок</p>
+    </div>
+
+    <div class="nav-bar">
+        <a href="#" class="nav-item active">Главная</a>
+        <a href="#" class="nav-item">Сделки</a>
+        <a href="https://t.me/playerok012" class="nav-item">+ Сделка</a>
+        <a href="#" class="nav-item">Чаты</a>
+        <a href="#" class="nav-item">Профиль</a>
+    </div>
+</body>
+</html>
