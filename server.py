@@ -212,5 +212,3 @@ async def main():
     asyncio.create_task(dp.start_polling(bot))
     print("Бот и FastAPI сервер успешно инициализированы!")
 
-@app.on_event("startup")
-on_startup = main
